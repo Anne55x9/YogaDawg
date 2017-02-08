@@ -12,13 +12,20 @@ namespace YogaDawg.Model
     {
         public ObservableCollection<Event> EventList { get; set; }
 
+        private EventCatalogSingleton _instance;
+
+        public EventCatalogSingleton Instance
+        {
+            get { return _instance; }
+            set { _instance = value; }
+        }
+
+
         public EventCatalogSingleton()
         {
             this.EventList.Add(new Event(20,"Yogi1", "Flow", "KBH"));
             this.EventList.Add(new Event(10, "Yogi2", "Hatcha", "KBH"));
         }
-
-        
 
         public void AddEvent(Event NyEvent)
         {
