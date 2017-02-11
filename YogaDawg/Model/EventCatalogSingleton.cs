@@ -8,23 +8,31 @@ using System.Threading.Tasks;
 
 namespace YogaDawg.Model
 {
-    class EventCatalogSingleton: INotifyPropertyChanged   
+    public class EventCatalogSingleton: INotifyPropertyChanged   
     {
         public ObservableCollection<Event> EventList { get; set; }
 
-        private EventCatalogSingleton _instance;
+        private static EventCatalogSingleton _instance;
 
-        public EventCatalogSingleton Instance
+        //Tom konstruktor
+
+        public static EventCatalogSingleton Instance
         {
-            get { return _instance; }
-            set { _instance = value; }
+            get
+            {
+                if (_instance == null)
+                {
+                    _instance = new EventCatalogSingleton();
+                }
+                return _instance;
+            }
         }
 
 
         public EventCatalogSingleton()
         {
-            //this.EventList.Add(new Event(20, "Yogi1", "Flow", "KBH"));
-            //this.EventList.Add(new Event(10, "Yogi2", "Hatcha", "KBH"));
+            this.EventList.Add(new Event(20, "Yogi1", "Flow", "KBH"));
+            this.EventList.Add(new Event(10, "Yogi2", "Hatcha", "KBH"));
         }
 
         public void AddEvent(Event NyEvent)

@@ -8,7 +8,7 @@ using YogaDawg.View;
 
 namespace YogaDawg.ViewModel
 {
-    class EventViewModel
+    public class EventViewModel
     {
         public EventCatalogSingleton EventList { get; set; }
 
