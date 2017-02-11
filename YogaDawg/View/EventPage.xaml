@@ -7,12 +7,11 @@
     xmlns:ViewModel="using:YogaDawg.ViewModel"
     x:Class="YogaDawg.View.EventPage"
     mc:Ignorable="d">
+    <Page.DataContext>
+        <ViewModel:EventViewModel/>
+    </Page.DataContext>
 
     <Grid Background="LightCoral">
-
-        <Grid.DataContext>
-            <ViewModel:EventViewModel/>
-        </Grid.DataContext>
 
         <TextBlock x:Name="Title" HorizontalAlignment="Left" Margin="120,74,0,0" TextWrapping="Wrap" Text="YogaDawg" VerticalAlignment="Top" Height="37" Width="107" SelectionChanged="textBlock_SelectionChanged" FontSize="22"/>
 

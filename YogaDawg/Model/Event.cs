@@ -14,13 +14,13 @@ namespace YogaDawg.Model
         public string Place { get; set; }
         public DateTime DateTime { get; set; }
 
-        public Event(int id, string name, string description, string place) //,DateTime dateTime)
+        public Event(int id, string name, string description, string place,DateTime dateTime)
         {
             this.ID = id;
             this.Name = name;
             this.Description = description;
             this.Place = place;
-            //this.DateTime = dateTime;
+            this.DateTime = dateTime;
         }
 
         public override string ToString()

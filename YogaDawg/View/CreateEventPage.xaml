@@ -8,11 +8,24 @@
     x:Class="YogaDawg.View.CreateEventPage"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Page.DataContext>
+        <ViewModel:EventViewModel/>
+    </Page.DataContext>
 
-        <Grid.DataContext>
-            <ViewModel:EventViewModel/>
-        </Grid.DataContext>
+    <Grid Background="AliceBlue">
+
+        <TextBlock x:Name="Title" HorizontalAlignment="Left" Margin="120,74,0,0" TextWrapping="Wrap" Text="YogaDawg" VerticalAlignment="Top" Height="37" Width="107" SelectionChanged="textBlock_SelectionChanged" FontSize="22"/>
+        
+        <TextBlock x:Name="Klasse ID" HorizontalAlignment="Left" Margin="63,178,0,0" TextWrapping="Wrap" Text="Klassens ID" VerticalAlignment="Top"/>
+        <TextBox x:Name="ID" HorizontalAlignment="Left" Margin="201,177,0,0" TextWrapping="Wrap" Text="id" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Klasse Navn" HorizontalAlignment="Left" Margin="66,221,0,0" TextWrapping="Wrap" Text="Klassens Navn" VerticalAlignment="Top"/>
+        <TextBox x:Name="Name" HorizontalAlignment="Left" Margin="201,217,0,0" TextWrapping="Wrap" Text="navn" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Beskrivelse" HorizontalAlignment="Left" Margin="66,261,0,0" TextWrapping="Wrap" Text="Beskrivelse" VerticalAlignment="Top"/>
+        <TextBox x:Name="Description" HorizontalAlignment="Left" Margin="201,257,0,0" TextWrapping="Wrap" Text="beskrivelse" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Sted" HorizontalAlignment="Left" Margin="66,301,0,0" TextWrapping="Wrap" Text="Sted" VerticalAlignment="Top"/>
+        <TextBox x:Name="Place" HorizontalAlignment="Left" Margin="201,297,0,0" TextWrapping="Wrap" Text="sted" VerticalAlignment="Top"/>
+        <DatePicker HorizontalAlignment="Left" Margin="33,362,0,0" VerticalAlignment="Top"/>
+        <TimePicker HorizontalAlignment="Left" Margin="53,429,0,0" VerticalAlignment="Top"/>
 
     </Grid>
 </Page>

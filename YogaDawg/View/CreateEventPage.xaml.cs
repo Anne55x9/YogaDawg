@@ -26,5 +26,10 @@ namespace YogaDawg.View
         {
             this.InitializeComponent();
         }
+
+        private void textBlock1_Copy1_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

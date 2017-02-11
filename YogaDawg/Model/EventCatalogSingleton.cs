@@ -23,8 +23,8 @@ namespace YogaDawg.Model
 
         public EventCatalogSingleton()
         {
-            this.EventList.Add(new Event(20,"Yogi1", "Flow", "KBH"));
-            this.EventList.Add(new Event(10, "Yogi2", "Hatcha", "KBH"));
+            //this.EventList.Add(new Event(20, "Yogi1", "Flow", "KBH"));
+            //this.EventList.Add(new Event(10, "Yogi2", "Hatcha", "KBH"));
         }
 
         public void AddEvent(Event NyEvent)
