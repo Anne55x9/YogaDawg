@@ -1,48 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Input;
+using YogaDawg.Common;
 using YogaDawg.Model;
 using YogaDawg.View;
+using YogaDawg.Handler;
 
 namespace YogaDawg.ViewModel
 {
     public class EventViewModel
     {
-        public EventCatalogSingleton EventList { get; set; }
+        public ObservableCollection<Event> EventList { get; set; }
 
-        private int _id;
+        public int ID { get; set; }
 
-        public int ID
-        {
-            get { return _id; }
-            set { _id = value; }
-        }
+        public string Name { get; set; }
 
-        private string _name;
+        public string Description { get; set; }
 
-        public string Name
-        {
-            get { return _name; }
-            set { _name = value; }
-        }
-
-        private string _description;
-
-        public string Description
-        {
-            get { return _description; }
-            set { _description = value; }
-        }
-
-        private string _place;
-
-        public string Place
-        {
-            get { return _place; }
-            set { _place = value; }
-        }
+        public string Place { get; set; }
 
         private DateTimeOffset _date;
 
@@ -60,12 +40,23 @@ namespace YogaDawg.ViewModel
             set { _time = value; }
         }
 
+        public Handler.EventHandler eh { get; set; }
+
+        public ICommand CreateEventCommand { get; set; }
+
         public EventViewModel()
         {
             DateTime dt = System.DateTime.Now;
             _date = new DateTimeOffset(dt.Year,dt.Month,dt.Day,0,0,0,0, new TimeSpan());
             _time = new TimeSpan(dt.Hour,dt.Minute, dt.Second);
+
+            EventList = EventCatalogSingleton.Instance.EventList;
+
+            eh = new Handler.EventHandler(this);
+            CreateEventCommand = new RelayCommand(eh.CreateEvent, null); 
         }
+
+
 
     }
 }
