@@ -25,7 +25,7 @@ namespace YogaDawg.Model
 
         public override string ToString()
         {
-            return ($"Event Id er: {ID}, Event navn er: {Name}, Event Beskrivelse: {Description}, Sted: {Place}, Dato og Tid: {DateTime}.");
+            return ($"Event Id er: {ID}, \nEvent navn er: {Name},\nEvent Beskrivelse: {Description}, \nSted: {Place}, \nDato og Tid: {DateTime}.");
         }
 
     }

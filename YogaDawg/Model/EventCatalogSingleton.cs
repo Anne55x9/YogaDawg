@@ -28,9 +28,9 @@ namespace YogaDawg.Model
             }
         }
 
-
         public EventCatalogSingleton()
         {
+            EventList = new ObservableCollection<Event>();
             this.EventList.Add(new Event(20, "Yogi1", "Flow", "KBH"));
             this.EventList.Add(new Event(10, "Yogi2", "Hatcha", "KBH"));
         }
