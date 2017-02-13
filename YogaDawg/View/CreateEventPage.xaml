@@ -9,6 +9,7 @@
     x:Class="YogaDawg.View.CreateEventPage"
     mc:Ignorable="d">
 
+    
     <Page.DataContext>
         <ViewModel:EventViewModel/>
     </Page.DataContext>
