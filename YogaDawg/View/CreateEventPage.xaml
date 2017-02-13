@@ -16,19 +16,19 @@
 
     <Grid Background="AliceBlue">
 
-        <TextBlock x:Name="Title" HorizontalAlignment="Left" Margin="120,74,0,0" TextWrapping="Wrap" Text="YogaDawg" VerticalAlignment="Top" Height="37" Width="107" FontSize="22"/>
+        <TextBlock x:Name="Title" HorizontalAlignment="Left" Margin="120,34,0,0" TextWrapping="Wrap" Text="YogaDawg" VerticalAlignment="Top" Height="37" Width="107" FontSize="22"/>
 
-        <TextBlock x:Name="KlasseID" HorizontalAlignment="Left" Margin="63,178,0,0" TextWrapping="Wrap" Text="Klassens ID" VerticalAlignment="Top"/>
-        <TextBox x:Name="ID" HorizontalAlignment="Left" Margin="201,177,0,0" TextWrapping="Wrap" Text="{Binding ID, Mode=TwoWay}" VerticalAlignment="Top"/>
-        <TextBlock x:Name="KlasseNavn" HorizontalAlignment="Left" Margin="66,221,0,0" TextWrapping="Wrap" Text="Klassens Navn" VerticalAlignment="Top"/>
-        <TextBox x:Name="Name" HorizontalAlignment="Left" Margin="201,217,0,0" TextWrapping="Wrap" Text="{Binding Name, Mode=TwoWay}" VerticalAlignment="Top"/>
-        <TextBlock x:Name="Beskrivelse" HorizontalAlignment="Left" Margin="66,261,0,0" TextWrapping="Wrap" Text="Beskrivelse" VerticalAlignment="Top"/>
-        <TextBox x:Name="Description" HorizontalAlignment="Left" Margin="201,257,0,0" TextWrapping="Wrap" Text="{Binding Description, Mode=TwoWay}" VerticalAlignment="Top"/>
-        <TextBlock x:Name="Sted" HorizontalAlignment="Left" Margin="66,301,0,0" TextWrapping="Wrap" Text="Sted" VerticalAlignment="Top"/>
-        <TextBox x:Name="Place" HorizontalAlignment="Left" Margin="201,297,0,0" TextWrapping="Wrap" Text="{Binding Place, Mode=TwoWay}" VerticalAlignment="Top"/>
-        <DatePicker HorizontalAlignment="Left" Margin="33,362,0,0" VerticalAlignment="Top"/>
-        <TimePicker HorizontalAlignment="Left" Margin="53,429,0,0" VerticalAlignment="Top"/>
-        <AppBarButton x:Name="appBarButton" HorizontalAlignment="Left" Icon="Calendar" Label="Create Event" Margin="127,490,0,0" VerticalAlignment="Top" Command="{Binding CreateEventCommand}"/>
+        <TextBlock x:Name="KlasseID" HorizontalAlignment="Left" Margin="67,94,0,0" TextWrapping="Wrap" Text="Klassens ID" VerticalAlignment="Top"/>
+        <TextBox x:Name="ID" HorizontalAlignment="Left" Margin="201,89,0,0" TextWrapping="Wrap" Text="{Binding ID, Mode=TwoWay}" VerticalAlignment="Top"/>
+        <TextBlock x:Name="KlasseNavn" HorizontalAlignment="Left" Margin="66,149,0,0" TextWrapping="Wrap" Text="Klassens Navn" VerticalAlignment="Top"/>
+        <TextBox x:Name="Name" HorizontalAlignment="Left" Margin="201,145,0,0" TextWrapping="Wrap" Text="{Binding Name, Mode=TwoWay}" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Beskrivelse" HorizontalAlignment="Left" Margin="66,205,0,0" TextWrapping="Wrap" Text="Beskrivelse" VerticalAlignment="Top"/>
+        <TextBox x:Name="Description" HorizontalAlignment="Left" Margin="201,201,0,0" TextWrapping="Wrap" Text="{Binding Description, Mode=TwoWay}" VerticalAlignment="Top"/>
+        <TextBlock x:Name="Sted" HorizontalAlignment="Left" Margin="66,263,0,0" TextWrapping="Wrap" Text="Sted" VerticalAlignment="Top"/>
+        <TextBox x:Name="Place" HorizontalAlignment="Left" Margin="201,259,0,0" TextWrapping="Wrap" Text="{Binding Place, Mode=TwoWay}" VerticalAlignment="Top"/>
+        <DatePicker HorizontalAlignment="Left" Margin="33,328,0,0" VerticalAlignment="Top"/>
+        <TimePicker HorizontalAlignment="Left" Margin="53,403,0,0" VerticalAlignment="Top"/>
+        <AppBarButton x:Name="appBarButton" HorizontalAlignment="Left" Icon="Calendar" Label="Create Event" Margin="73,474,0,0" VerticalAlignment="Top" Command="{Binding CreateEventCommand}"/>
         <AppBarButton x:Name="appBarButton1" HorizontalAlignment="Left" Icon="Back" Label="Previous Page" Margin="282,557,0,0" VerticalAlignment="Top">
             <Interactivity:Interaction.Behaviors>
                 <Core:EventTriggerBehavior EventName="Click">

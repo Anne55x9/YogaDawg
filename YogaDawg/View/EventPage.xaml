@@ -12,7 +12,7 @@
         <ViewModel:EventViewModel/>
     </Page.DataContext>
 
-    <Grid Background="LightCoral">
+    <Grid Background="AliceBlue">
 
         <TextBlock x:Name="Title" HorizontalAlignment="Left" Margin="120,34,0,0" TextWrapping="Wrap" Text="YogaDawg" VerticalAlignment="Top" Height="37" Width="107" SelectionChanged="textBlock_SelectionChanged" FontSize="22"/>
         
