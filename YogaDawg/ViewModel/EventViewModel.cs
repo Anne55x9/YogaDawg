@@ -9,10 +9,11 @@ using YogaDawg.Common;
 using YogaDawg.Model;
 using YogaDawg.View;
 using YogaDawg.Handler;
+using System.ComponentModel;
 
 namespace YogaDawg.ViewModel
 {
-    public class EventViewModel
+    public class EventViewModel: INotifyPropertyChanged
     {
         public ObservableCollection<Event> EventList { get; set; }
 
@@ -44,6 +45,14 @@ namespace YogaDawg.ViewModel
 
         public ICommand CreateEventCommand { get; set; }
 
+        private Event _selectedEvent;
+
+        public Event SelectedEvent
+        {
+            get { return _selectedEvent; }
+            set { _selectedEvent = value; OnPropertyChanged(nameof(SelectedEvent)); }
+        }
+
         public EventViewModel()
         {
             DateTime dt = System.DateTime.Now;
@@ -56,6 +65,19 @@ namespace YogaDawg.ViewModel
             CreateEventCommand = new RelayCommand(eh.CreateEvent, null); 
         }
 
+
+
+
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(string propertyname)
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyname));
+            }
+        }
 
 
     }
