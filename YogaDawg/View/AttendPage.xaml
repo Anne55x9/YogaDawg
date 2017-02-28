@@ -5,16 +5,18 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:ViewModel="using:YogaDawg.ViewModel"
-    x:Class="YogaDawg.View.BlankPage1"
+    x:Class="YogaDawg.View.AttendPage"
     mc:Ignorable="d">
 
     <Page.DataContext>
         <ViewModel:EventViewModel/>
     </Page.DataContext>
 
-    <Grid Background="AliceBlue">
-        <TextBlock x:Name="Title" HorizontalAlignment="Left" Margin="120,34,0,0" TextWrapping="Wrap" Text="YogaDawg" VerticalAlignment="Top" Height="37" Width="107" FontSize="22"/>
 
+
+    <Grid Background="AliceBlue">
+
+        <TextBlock x:Name="Title" HorizontalAlignment="Left" Margin="120,34,0,0" TextWrapping="Wrap" Text="YogaDawg" VerticalAlignment="Top" Height="37" Width="107" FontSize="22"/>
         <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="10,496,0,0" TextWrapping="Wrap" Text="{Binding SelectedEvent, Mode=TwoWay}" VerticalAlignment="Top" Width="330" Height="37"/>
 
 
