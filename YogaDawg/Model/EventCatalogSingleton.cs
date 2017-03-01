@@ -40,6 +40,8 @@ namespace YogaDawg.Model
             EventList.Add(NyEvent);
         }
 
+        
+
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged(string propertyname)
         {

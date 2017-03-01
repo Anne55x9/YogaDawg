@@ -14,10 +14,11 @@ namespace YogaDawg.Handler
     {
         private EventViewModel Evm { get; set; }
 
+        public Event SelectedEvent { get; set; }
+
         public EventHandler(EventViewModel evm)
         {
             this.Evm = evm;
-
         }
 
         public void CreateEvent()
@@ -31,8 +32,13 @@ namespace YogaDawg.Handler
 
             tempEvent.DateTime = DateTimeConverter.DateTimeOffsetAndTimeSetToDateTime(Evm.Date, Evm.Time);
 
-            EventCatalogSingleton.Instance.AddEvent(tempEvent);
-           
+            EventCatalogSingleton.Instance.AddEvent(tempEvent);    
         }
+
+        public void DisplaySelectedEvent()
+        {
+            this.SelectedEvent = SelectedEvent;
+        }
+
     }
 }

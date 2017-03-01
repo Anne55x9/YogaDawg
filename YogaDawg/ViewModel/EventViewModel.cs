@@ -44,6 +44,7 @@ namespace YogaDawg.ViewModel
         public Handler.EventHandler eh { get; set; }
 
         public ICommand CreateEventCommand { get; set; }
+        public ICommand DisplaySelectedEventCommand { get; set; }
 
         private Event _selectedEvent;
 
@@ -52,6 +53,8 @@ namespace YogaDawg.ViewModel
             get { return _selectedEvent; }
             set { _selectedEvent = value; OnPropertyChanged(nameof(SelectedEvent)); }
         }
+
+
 
         public EventViewModel()
         {
@@ -62,10 +65,12 @@ namespace YogaDawg.ViewModel
             EventList = EventCatalogSingleton.Instance.EventList;
 
             eh = new Handler.EventHandler(this);
-            CreateEventCommand = new RelayCommand(eh.CreateEvent, null); 
+            CreateEventCommand = new RelayCommand(eh.CreateEvent, null);
+            DisplaySelectedEventCommand = new RelayCommand(eh.DisplaySelectedEvent, null); 
+
         }
 
-
+      
 
 
 

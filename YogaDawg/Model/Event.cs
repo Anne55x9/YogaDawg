@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -28,5 +29,6 @@ namespace YogaDawg.Model
             return ($"Event Id er: {ID}, \nEvent navn er: {Name},\nEvent Beskrivelse: {Description}, \nSted: {Place}, \nDato og Tid: {DateTime}.");
         }
 
+      
     }
 }
