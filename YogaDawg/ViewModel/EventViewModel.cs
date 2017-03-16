@@ -17,6 +17,8 @@ namespace YogaDawg.ViewModel
     {
         public ObservableCollection<Event> EventList { get; set; }
 
+        public ObservableCollection<Tilmeld> TilmeldList { get; set; }
+
         public int ID { get; set; }
 
         public string Name { get; set; }
@@ -41,6 +43,8 @@ namespace YogaDawg.ViewModel
             set { _time = value; }
         }
 
+        public string Navn { get; set; }
+
         public Handler.EventHandler eh { get; set; }
 
         public ICommand CreateEventCommand { get; set; }
@@ -64,9 +68,11 @@ namespace YogaDawg.ViewModel
 
             EventList = EventCatalogSingleton.Instance.EventList;
 
+            TilmeldList = TilmeldSingleton.Instance.TilmeldList;
+
             eh = new Handler.EventHandler(this);
             CreateEventCommand = new RelayCommand(eh.CreateEvent, null);
-            DisplaySelectedEventCommand = new RelayCommand(eh.DisplaySelectedEvent, null); 
+           // DisplaySelectedEventCommand = new RelayCommand(eh.DisplaySelectedEvent, null); 
 
         }
 

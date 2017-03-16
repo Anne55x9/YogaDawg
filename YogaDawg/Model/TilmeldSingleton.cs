@@ -12,17 +12,17 @@ namespace YogaDawg.Model
     {
        public ObservableCollection<Tilmeld> TilmeldList { get; set; }
 
-        private static EventCatalogSingleton _instance;
+        private static TilmeldSingleton _instance;
 
         //Tom konstruktor
 
-        public static EventCatalogSingleton Instance
+        public static TilmeldSingleton Instance
         {
             get
             {
                 if (_instance == null)
                 {
-                    _instance = new EventCatalogSingleton();
+                    _instance = new TilmeldSingleton();
                 }
                 return _instance;
             }

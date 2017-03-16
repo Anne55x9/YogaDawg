@@ -54,7 +54,7 @@
             <Run Text="Tilmeld"/>
             <Run Text=" med navn"/>
         </TextBlock>
-        <TextBox x:Name="Tilmelding" HorizontalAlignment="Left" Margin="17,488,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="180"/>
+        <TextBox x:Name="Tilmelding" HorizontalAlignment="Left" Margin="17,488,0,0" TextWrapping="Wrap" Text="{Binding Navn, Mode=TwoWay}" VerticalAlignment="Top" Width="180"/>
 
 
         <!--<ListView x:Name="listView" DisplayMemberPath="" HorizontalAlignment="Left" Height="400" Margin="10,96,0,0" VerticalAlignment="Top" Width="330" ItemsSource="{Binding EventList,  Mode=TwoWay}"  BorderBrush="Black" BorderThickness="1"/>-->

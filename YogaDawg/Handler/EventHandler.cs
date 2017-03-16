@@ -14,7 +14,7 @@ namespace YogaDawg.Handler
     {
         private EventViewModel Evm { get; set; }
 
-        public Event SelectedEvent { get; set; }
+        //public Event SelectedEvent { get; set; }
 
         public EventHandler(EventViewModel evm)
         {
@@ -35,10 +35,20 @@ namespace YogaDawg.Handler
             EventCatalogSingleton.Instance.AddEvent(tempEvent);    
         }
 
-        public void DisplaySelectedEvent()
+        public void CreateTilmeld()
         {
-            this.SelectedEvent = SelectedEvent;
+            Tilmeld tempTilmeld = new Tilmeld(Evm.Navn);
+
+            tempTilmeld.Navn = Evm.Navn;
+            TilmeldSingleton.Instance.AddTilmelding(tempTilmeld);
         }
+
+        //public void DisplaySelectedEvent()
+        //{
+        //    this.SelectedEvent = SelectedEvent;
+        //}
+
+
 
     }
 }
