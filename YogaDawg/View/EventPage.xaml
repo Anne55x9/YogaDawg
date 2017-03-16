@@ -14,9 +14,9 @@
 
     <Grid Background="AliceBlue">
 
-        <TextBlock x:Name="Title" HorizontalAlignment="Center" Margin="0,34,0,0" TextWrapping="Wrap" Text="YogaDawg Holdliste" VerticalAlignment="Top" Height="37" Width="200" SelectionChanged="textBlock_SelectionChanged" FontSize="22"/>
+        <TextBlock x:Name="Title" HorizontalAlignment="Center" Margin="0,34,0,0" TextWrapping="Wrap" Text="YogaDawg Holdliste" VerticalAlignment="Top" Height="37" Width="200" FontSize="22"/>
 
-        <ListView x:Name="listView" DisplayMemberPath="" HorizontalAlignment="Left" Height="371" Margin="10,72,0,0" VerticalAlignment="Top" Width="330" ItemsSource="{Binding EventList,  Mode=TwoWay}" SelectedItem="{Binding SelectedEvent, Mode=TwoWay}" BorderBrush="Black" BorderThickness="1" Foreground="Black">
+        <ListView x:Name="listView" DisplayMemberPath="" HorizontalAlignment="Left" Height="371" Margin="10,72,0,0" VerticalAlignment="Top" Width="330" ItemsSource="{Binding EventList,  Mode=TwoWay}" BorderBrush="Black" BorderThickness="1" Foreground="Black">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <StackPanel BorderBrush="Black" Padding="10,0,10,10" Margin="6" BorderThickness="3" CornerRadius="10">
@@ -41,7 +41,7 @@
                 </Core:EventTriggerBehavior>
             </Interactivity:Interaction.Behaviors>
         </AppBarButton>
-        <AppBarButton x:Name="appBarButton1" Icon="SolidStar" Label="Se tilmeldte&#xD;&#xA;" Margin="203,0,0,25" VerticalAlignment="Bottom" RenderTransformOrigin="-0.123,0.68">
+        <AppBarButton x:Name="appBarButton1" Icon="SolidStar" Label="Se tilmeldte" Margin="203,0,0,25" VerticalAlignment="Bottom" RenderTransformOrigin="-0.123,0.68">
             <Interactivity:Interaction.Behaviors>
                 <Core:EventTriggerBehavior EventName="Click">
                     <Core:NavigateToPageAction TargetPage="YogaDawg.View.AttendPage"/>
@@ -51,11 +51,8 @@
 
         <AppBarButton x:Name="appBarButton2" HorizontalAlignment="Left" Icon="AddFriend" Label="Tilmeld Hold" Command="{Binding CreateTilmeldCommand}" Margin="22,536,0,0" VerticalAlignment="Top" Width="91"/>
         <TextBlock x:Name="TilmeldNavn" HorizontalAlignment="Left" Text="Tilmeld med navn" Margin="18,464,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="128"/>
-        <TextBox x:Name="textbox" HorizontalAlignment="Left" Margin="17,488,0,0" TextWrapping="Wrap" Text="{Binding Navn, Mode=TwoWay}" VerticalAlignment="Top" Width="180"/>
-
-
-        <!--<ListView x:Name="listView" DisplayMemberPath="" HorizontalAlignment="Left" Height="400" Margin="10,96,0,0" VerticalAlignment="Top" Width="330" ItemsSource="{Binding EventList,  Mode=TwoWay}"  BorderBrush="Black" BorderThickness="1"/>-->
-
+        <TextBox x:Name="textbox" HorizontalAlignment="Left" Margin="17,488,0,0" TextWrapping="Wrap" Text="{Binding Navn, Mode=TwoWay}" VerticalAlignment="Top" Width="147"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Margin="186,488,0,0" TextWrapping="Wrap" Text="{Binding Tal}" VerticalAlignment="Top" Width="10"/>
 
     </Grid>
 </Page>

@@ -31,8 +31,8 @@ namespace YogaDawg.Model
         public TilmeldSingleton()
         {
             TilmeldList = new ObservableCollection<Tilmeld>();
-            this.TilmeldList.Add(new Tilmeld("Anne Sofie Wanscher"));
-            this.TilmeldList.Add(new Tilmeld("Emil Bureau"));
+            this.TilmeldList.Add(new Tilmeld("Anne Sofie", 0));
+            this.TilmeldList.Add(new Tilmeld("Emil", 0));
         }
 
         public void AddTilmelding(Tilmeld nyTilmeld)

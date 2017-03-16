@@ -44,6 +44,8 @@ namespace YogaDawg.ViewModel
         }
 
         public string Navn { get; set; }
+        //public string Efternavn { get; set; }
+        public int Tal { get; set; }
 
         public Handler.EventHandler eh { get; set; }
 

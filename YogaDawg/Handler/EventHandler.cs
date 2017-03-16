@@ -37,9 +37,11 @@ namespace YogaDawg.Handler
 
         public void CreateTilmeld()
         {
-            Tilmeld tempTilmeld = new Tilmeld(Evm.Navn);
+            Tilmeld tempTilmeld = new Tilmeld(Evm.Navn, Evm.Tal);
 
             tempTilmeld.Navn = Evm.Navn;
+            tempTilmeld.Tal = Evm.Tal;
+            //tempTilmeld.Tal = Evm.Tal;
             TilmeldSingleton.Instance.AddTilmelding(tempTilmeld);
         }
 
