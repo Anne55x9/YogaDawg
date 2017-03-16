@@ -14,7 +14,7 @@
 
     <Grid Background="AliceBlue">
 
-        <TextBlock x:Name="Title" HorizontalAlignment="Left" Margin="120,34,0,0" TextWrapping="Wrap" Text="YogaDawg" VerticalAlignment="Top" Height="37" Width="107" SelectionChanged="textBlock_SelectionChanged" FontSize="22"/>
+        <TextBlock x:Name="Title" HorizontalAlignment="Center" Margin="0,34,0,0" TextWrapping="Wrap" Text="YogaDawg Holdliste" VerticalAlignment="Top" Height="37" Width="200" SelectionChanged="textBlock_SelectionChanged" FontSize="22"/>
 
         <ListView x:Name="listView" DisplayMemberPath="" HorizontalAlignment="Left" Height="439" Margin="10,72,0,0" VerticalAlignment="Top" Width="330" ItemsSource="{Binding EventList,  Mode=TwoWay}" SelectedItem="{Binding SelectedEvent, Mode=TwoWay}" BorderBrush="Black" BorderThickness="1" Foreground="Black">
             <ListView.ItemTemplate>
@@ -34,14 +34,14 @@
             </ListView.ItemTemplate>
         </ListView>
 
-        <AppBarButton x:Name="appBarButton" HorizontalAlignment="Left" Icon="Forward" Label="Next Page" Margin="277,541,0,0" VerticalAlignment="Top">
+        <AppBarButton x:Name="appBarButton" HorizontalAlignment="Left" Icon="Emoji2" Label="Opret Hold" Margin="277,541,0,0" VerticalAlignment="Top">
             <Interactivity:Interaction.Behaviors>
                 <Core:EventTriggerBehavior EventName="Click">
                     <Core:NavigateToPageAction TargetPage="YogaDawg.View.CreateEventPage"/>
                 </Core:EventTriggerBehavior>
             </Interactivity:Interaction.Behaviors>
         </AppBarButton>
-        <AppBarButton x:Name="appBarButton1" Icon="Accept" Label="Tilmeld Hold" Margin="75,0,0,21" VerticalAlignment="Bottom">
+        <AppBarButton x:Name="appBarButton1" Icon="SolidStar" Label="Se tilmeldte&#xD;&#xA;" Margin="75,0,0,41" VerticalAlignment="Bottom">
             <Interactivity:Interaction.Behaviors>
                 <Core:EventTriggerBehavior EventName="Click">
                     <Core:NavigateToPageAction TargetPage="YogaDawg.View.AttendPage"/>
