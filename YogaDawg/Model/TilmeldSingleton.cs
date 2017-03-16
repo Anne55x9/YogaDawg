@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace YogaDawg.Model
 {
-    public class EventCatalogSingleton: INotifyPropertyChanged   
+    public class TilmeldSingleton : INotifyPropertyChanged
     {
-        public ObservableCollection<Event> EventList { get; set; }
+       public ObservableCollection<Tilmeld> TilmeldList { get; set; }
 
         private static EventCatalogSingleton _instance;
 
@@ -28,25 +28,28 @@ namespace YogaDawg.Model
             }
         }
 
-        public EventCatalogSingleton()
+        public TilmeldSingleton()
         {
-            EventList = new ObservableCollection<Event>();
-            this.EventList.Add(new Event(20, "Yogi1", "Flow", "KBH"));
-            
+            TilmeldList = new ObservableCollection<Tilmeld>();
+            this.TilmeldList.Add(new Tilmeld("Anne Sofie Wanscher"));
+            this.TilmeldList.Add(new Tilmeld("Emil Bureau"));
         }
 
-        public void AddEvent(Event NyEvent)
+        public void AddTilmelding(Tilmeld nyTilmeld)
         {
-            EventList.Add(NyEvent);
+            TilmeldList.Add(nyTilmeld);
         }
 
-        
+
+
+        /// <summary>
+        /// INotifyPropertyChanged interface metode. 
+        /// </summary>
 
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged(string propertyname)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyname));
         }
-
     }
 }
