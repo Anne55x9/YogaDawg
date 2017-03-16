@@ -28,7 +28,7 @@
         <TextBox x:Name="Place" HorizontalAlignment="Left" Margin="201,259,0,0" TextWrapping="Wrap" Text="{Binding Place, Mode=TwoWay}" VerticalAlignment="Top"/>
         <DatePicker HorizontalAlignment="Left" Margin="33,328,0,0" VerticalAlignment="Top"/>
         <TimePicker HorizontalAlignment="Left" Margin="53,403,0,0" VerticalAlignment="Top"/>
-        <AppBarButton x:Name="appBarButton" HorizontalAlignment="Left" Icon="Calendar" Label="Create Event" Margin="73,474,0,0" VerticalAlignment="Top" Command="{Binding CreateEventCommand}"/>
+        <AppBarButton x:Name="appBarButton" HorizontalAlignment="Left" Icon="Calendar" Label="Opret Hold" Margin="73,474,0,0" VerticalAlignment="Top" Command="{Binding CreateEventCommand}"/>
         <AppBarButton x:Name="appBarButton1" HorizontalAlignment="Left" Icon="Back" Label="Previous Page" Margin="282,557,0,0" VerticalAlignment="Top">
             <Interactivity:Interaction.Behaviors>
                 <Core:EventTriggerBehavior EventName="Click">

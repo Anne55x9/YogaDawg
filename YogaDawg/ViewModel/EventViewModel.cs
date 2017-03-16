@@ -48,15 +48,16 @@ namespace YogaDawg.ViewModel
         public Handler.EventHandler eh { get; set; }
 
         public ICommand CreateEventCommand { get; set; }
-        public ICommand DisplaySelectedEventCommand { get; set; }
+        public ICommand CreateTilmeldCommand { get; set; }
+        //public ICommand DisplaySelectedEventCommand { get; set; }
 
-        private Event _selectedEvent;
+        //private Event _selectedEvent;
 
-        public Event SelectedEvent
-        {
-            get { return _selectedEvent; }
-            set { _selectedEvent = value; OnPropertyChanged(nameof(SelectedEvent)); }
-        }
+        //public Event SelectedEvent
+        //{
+        //    get { return _selectedEvent; }
+        //    set { _selectedEvent = value; OnPropertyChanged(nameof(SelectedEvent)); }
+        //}
 
 
 
@@ -72,13 +73,10 @@ namespace YogaDawg.ViewModel
 
             eh = new Handler.EventHandler(this);
             CreateEventCommand = new RelayCommand(eh.CreateEvent, null);
+            CreateTilmeldCommand = new RelayCommand(eh.CreateTilmeld, null);
            // DisplaySelectedEventCommand = new RelayCommand(eh.DisplaySelectedEvent, null); 
 
         }
-
-      
-
-
 
         public event PropertyChangedEventHandler PropertyChanged;
 

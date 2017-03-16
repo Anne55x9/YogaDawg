@@ -20,7 +20,7 @@ namespace YogaDawg.Model
 
         public override string ToString()
         {
-            return $"{Navn}";
+            return $"Navn: {Navn}";
         }
 
     }
