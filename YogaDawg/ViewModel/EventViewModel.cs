@@ -13,8 +13,9 @@ using System.ComponentModel;
 
 namespace YogaDawg.ViewModel
 {
-    public class EventViewModel: INotifyPropertyChanged
+    public class EventViewModel : INotifyPropertyChanged
     {
+    
         public ObservableCollection<Event> EventList { get; set; }
 
         public ObservableCollection<Tilmeld> TilmeldList { get; set; }
