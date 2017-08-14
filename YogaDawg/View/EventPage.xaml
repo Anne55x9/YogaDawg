@@ -23,7 +23,8 @@
                         <StackPanel.Background>
                             <SolidColorBrush Color="SeaShell"/>
                         </StackPanel.Background>
-                        <TextBlock Text="{Binding Path=Id}"/>
+                        <TextBlock Text="{Binding Path=ID}"/> 
+                        
                         <TextBlock Text="{Binding Path=Name}"/>
                         <TextBlock Text="{Binding Path=Description}"/>
                         <TextBlock Text="{Binding Path=Place}"/>
